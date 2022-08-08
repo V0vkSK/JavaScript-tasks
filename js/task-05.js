@@ -9,9 +9,26 @@ const products = [
   { name: 'Захват', price: 1200, quantity: 2 },
 ];
 
+
+
 const getAllPropValues = function(arr, prop) {
-  // твой код
-};
+  const oldTable = [...arr];
+    const table = [];
+  
+
+  for (let i = 0; i < oldTable.length; i+=1){
+        const obj = oldTable[i];  // Получаем отдельно объект
+        table.push(obj[prop]);
+      
+  }  
+    return table;
+
+  }
+    
+    
+
+  
+
 
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.

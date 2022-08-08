@@ -1,6 +1,7 @@
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Задание 6
-// Напиши функцию calculateTotalPrice(allProdcuts, productName), которая получает массив объектов и имя продукта (значение свойства name). Возвращает общую стоимость продукта (цена * количество).
+// Напиши функцию calculateTotalPrice(allProdcuts, productName), которая получает массив объектов и имя продукта (значение свойства name).
+//  Возвращает общую стоимость продукта(цена * количество).
 
 // Вызовы функции для проверки работоспособности твоей реализации.
 
@@ -11,8 +12,18 @@ const products = [
   { name: 'Захват', price: 1200, quantity: 2 },
 ];
 
-const calculateTotalPrice = function(allProdcuts, productName) {
-  // твой код
+const calculateTotalPrice = function (allProdcuts, productName) {
+      
+    let total = 0;    
+
+    for (let i = 0; i < allProdcuts.length; i += 1){
+        const obj = allProdcuts[i];
+        
+        if (obj.name === productName) {
+            total = obj.price * obj.quantity;        
+        }
+    }
+    return total;
 };
 
 /*
