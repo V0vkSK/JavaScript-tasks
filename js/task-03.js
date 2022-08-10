@@ -19,11 +19,12 @@ class Storage{
         this.items.push(item);        
     }
     removeItem(item) {
-        const activeItems = this.items.lenght;
-        console.log(activeItems);
+        console.log(this.items);
+            
+    //    !             Не работает 
+        // !            this.items.lenght
         
-
-        for (let i = 0; i < activeItems.lenght; i += 1){
+        for (let i = 0; i < this.items.lenght; i += 1){
                         
             if (this.items[i] === item) {
                 this.items.splice(i, i);
