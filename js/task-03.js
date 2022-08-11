@@ -18,20 +18,19 @@ class Storage{
     addItem(item) {
         this.items.push(item);        
     }
+    // * Правильный вариант с методом массива
+    
     removeItem(item) {
-        console.log(this.items);
-            
-    //    !             Не работает 
-        // !            this.items.lengtt
+        this.items = this.items.filter((el) => el !== item);
         
-        for (let i = 0; i < this.items.length  ; i += 1){
+        // for (let i = 0; i < this.items.length  ; i += 1){
                         
-            if (this.items[i] === item) {
-                this.items.splice(i, i);
-            }
+        //     if (this.items[i] === item) {
+        //         this.items.splice(i, i);
+        //     }
         }
     }
-}
+
 
 const storage = new Storage([
   'Нанитоиды',
