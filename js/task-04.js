@@ -1,30 +1,32 @@
 // Задание 4
-// Напиши класс StringBuilder. На вход он получает один параметр - строку, которую записывает в свойство _value.
+// Напиши класс StringBuilder. На вход он получает один параметр - строку, которую записывает в свойство newValue.
 
 // Добавь классу следующий функционал:
 
-// Геттер value - возвращает текущее значение поля _value
-// Метод append(str) - получает парметр str (строку) и добавляет ее в конец _value
+// Геттер value - возвращает текущее значение поля newValue
+// Метод append(str) - получает парметр str (строку) и добавляет ее в конец newValue
 // Метод prepend(str) - получает парметр str (строку) и добавляет ее в начало value
-// Метод pad(str) - получает парметр str (строку) и добавляет ее в начало и в конец _value
+// Метод pad(str) - получает парметр str (строку) и добавляет ее в начало и в конец newValue
 
 class StringBuilder{
     constructor(value) {
-        this._value = value;
+        this.newValue = value;
     }
 
     // ! Обязательно писать геттер????
     get value(){
-        return this._value
+        return this.newValue
     }
     append(str) {       
-        this._value = this._value + str;
+        
+        this.newValue = this.newValue + str;
+        
     }
     prepend(str) {
-        this._value = str + this._value;
+        this.newValue = str + this.newValue;
     }
     pad(str) {
-        this._value = str + this._value +str;
+        this.newValue = str + this.newValue +str;
     }
 }
 

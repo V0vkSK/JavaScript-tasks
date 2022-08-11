@@ -22,9 +22,9 @@ class Storage{
         console.log(this.items);
             
     //    !             Не работает 
-        // !            this.items.lenght
+        // !            this.items.lengtt
         
-        for (let i = 0; i < this.items.lenght; i += 1){
+        for (let i = 0; i < this.items.length  ; i += 1){
                         
             if (this.items[i] === item) {
                 this.items.splice(i, i);
