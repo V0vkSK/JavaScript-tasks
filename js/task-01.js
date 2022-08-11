@@ -4,9 +4,8 @@ import users from "./users.js";
 
 const getUserNames = users => {
         
-        const userName = users.map(function (user) {
-        return user.name;
-        })
+        const userName = users.map(user => user.name);
+        
     return userName;
 };
 

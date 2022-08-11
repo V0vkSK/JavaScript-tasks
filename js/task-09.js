@@ -2,10 +2,12 @@
 // Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
 
 import users from "./users.js";
+    
 
-
-const getNamesSortedByFriendsCount = users => {
-
+const getNamesSortedByFriendsCount = users => {   
+    const sortByCountOfFriends = users.sort((PrevFriend, NextFriend) => PrevFriend.friends.length - NextFriend.friends.length).map(user => user.name);
+    
+return sortByCountOfFriends;
 };
 
 console.log(getNamesSortedByFriendsCount(users));
